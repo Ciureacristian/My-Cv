@@ -66,3 +66,16 @@ ScrollReveal().reveal('.home-content p, .about-content ', {
 const typed = new Typed('.multiple-text', {
   strings: ['Frontend Developer'],
 });
+
+const btn = document.querySelector('.btn');
+const aboutContent = document.querySelector('.about-content');
+
+// Add a click event listener to the button
+btn.addEventListener('click', function () {
+  aboutContent.classList.toggle('hidden');
+  if (aboutContent.classList.contains('hidden')) {
+    btn.textContent = 'Read More';
+  } else {
+    btn.textContent = 'Read Less';
+  }
+});
